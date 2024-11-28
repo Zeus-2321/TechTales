@@ -10,13 +10,6 @@ const notFoundStyles = {
     alignItems: "center"
 };
 
-const imgStyles = {
-    width: "400px",
-    height: "auto",
-    marginbottom: "1rem",
-    maxWidth: "100%"
-};
-
 function NotFound() {
     return (
         <div style={notFoundStyles}>
