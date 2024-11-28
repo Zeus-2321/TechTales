@@ -13,8 +13,7 @@ export default function Login({ toggle }) {
     setLoading(true);
 
     try {
-    //   const response = await fetch('https://techtales-backend.onrender.com/api/auth/login', {
-        const response = await fetch('https://cors-anywhere.herokuapp.com/https://techtales-backend.onrender.com/api/auth/login', {
+      const response = await fetch('https://techtales-backend.onrender.com/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -35,52 +34,34 @@ export default function Login({ toggle }) {
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      <h2 style={{ textAlign: 'center' }}>Login</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-        style={{ ...inputStyle }}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-        style={{ ...inputStyle }}
-      />
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <button type="submit" style={{ ...buttonStyle }} disabled={loading}>
-        {loading ? 'Logging in...' : 'Login'}
-      </button>
-      <p style={{ textAlign: 'center', marginTop: '1rem' }}>
-        Don't have an account?{' '}
-        <span onClick={toggle} style={{ color: '#007bff', cursor: 'pointer' }}>
-          Sign Up
-        </span>
-      </p>
-    </form>
+    <div className="login-container">
+      <form onSubmit={handleLogin} className="login-form">
+        <h2>Login</h2>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        {error && <p className="error-message">{error}</p>}
+        <button type="submit" className="login-btn" disabled={loading}>
+          {loading ? 'Logging in...' : 'Login'}
+        </button>
+        <p className="signup-redirect">
+          Don't have an account?{' '}
+          <span className="toggle-signup" onClick={toggle}>
+            Sign Up
+          </span>
+        </p>
+      </form>
+    </div>
   );
 }
-
-const inputStyle = {
-  width: '100%',
-  padding: '0.8rem',
-  margin: '0.5rem 0',
-  borderRadius: '5px',
-  border: '1px solid #ddd',
-};
-
-const buttonStyle = {
-  width: '100%',
-  padding: '0.8rem',
-  margin: '1rem 0',
-  borderRadius: '5px',
-  backgroundColor: '#007bff',
-  color: '#fff',
-  border: 'none',
-};

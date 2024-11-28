@@ -1,0 +1,281 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafb; /* Light gray for a clean look */
+    color: #333; /* Darker text for readability */
+  }
+  
+  h1 {
+    color: #2c3e50; /* Dark blue-gray */
+  }
+  
+  button {
+    cursor: pointer;
+  }
+
+  /* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #f9fafb;
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 8px;
+    background: white;
+    box-sizing: border-box;
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  /* Input Fields */
+  .login-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .login-form input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+  }
+  
+  /* Button */
+  .login-btn {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #2c81ba;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  /* Signup Redirect */
+  .signup-redirect {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  .toggle-signup {
+    color: #3498db;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .toggle-signup:hover {
+    text-decoration: underline;
+  }
+  
+  /* Homepage Styles */
+  .homepage-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logout-btn,
+  .post-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+  .logout-btn {
+    background-color: #e74c3c; /* Red */
+    color: white;
+  }
+  
+  .post-btn {
+    background-color: #3498db; /* Blue */
+    color: white;
+  }
+  
+  .blog-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add space between blog items */
+  }
+  
+  .blog-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add spacing between content */
+  }
+  
+  .blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .author-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between profile picture and name */
+  }
+  
+  .profile-pic img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3498db; /* Border matches the Post button */
+  }
+  
+  .author-name {
+    font-weight: bold;
+    color: #34495e; /* Dark gray-blue */
+  }
+  
+  .blog-date {
+    font-size: 14px;
+    color: #95a5a6; /* Light gray */
+  }
+  
+  .blog-title {
+    font-size: 20px;
+    color: #2c3e50;
+    margin: 0;
+  }
+  
+  .blog-content {
+    color: #555; /* Slightly lighter gray for text */
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #f9fafb;
+  }
+  
+  .signup-form {
+    width: 100%;
+    max-width: 400px; /* Prevents the form from stretching too wide */
+    padding: 2rem;
+    border-radius: 8px;
+    background: white;
+    box-sizing: border-box; /* Ensures padding doesn't exceed the container */
+  }
+  
+  .signup-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  /* Input Fields */
+  .signup-form input {
+    width: 100%; /* Ensures inputs are aligned properly */
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box; /* Prevents padding from overflowing */
+  }
+  
+  .signup-form input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+  }
+  
+  /* Button */
+  .signup-btn {
+    width: 100%; /* Ensures button aligns with input fields */
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-btn:hover {
+    background-color: #2c81ba;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  /* Login Redirect */
+  .login-redirect {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  .toggle-login {
+    color: #3498db;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .toggle-login:hover {
+    text-decoration: underline;
+  }
