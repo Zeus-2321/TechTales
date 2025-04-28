@@ -44,7 +44,7 @@ export default function Homepage() {
                   <div className="profile-pic">
                     {/* Profile placeholder */}
                     <img
-                      src={blog.authorProfilePic || 'https://via.placeholder.com/50'}
+                      src={blog.authorProfilePic || 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png'}
                       alt={`${blog.author}'s profile`}
                     />
                   </div>
