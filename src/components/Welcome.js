@@ -5,7 +5,7 @@ import Signup from './Signup';
 export default function Welcome() {
   const [isSignup, setIsSignup] = useState(false);
 
-  fetch('https://techtales-backend.onrender.com');
+  fetch('https://techtales-backend.onrender.com/api/home');
 
   return (
     <div
